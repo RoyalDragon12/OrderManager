@@ -41,6 +41,7 @@
             this.btnEditUser = new System.Windows.Forms.Button();
             this.btnCreateNewUser = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.btnExchange = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -94,6 +95,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnExchange);
             this.groupBox2.Controls.Add(this.btnOrder);
             this.groupBox2.Controls.Add(this.btnDeleteUser);
             this.groupBox2.Controls.Add(this.btnEditUser);
@@ -107,7 +109,7 @@
             // 
             // btnOrder
             // 
-            this.btnOrder.Location = new System.Drawing.Point(709, 16);
+            this.btnOrder.Location = new System.Drawing.Point(622, 16);
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.Size = new System.Drawing.Size(81, 47);
             this.btnOrder.TabIndex = 11;
@@ -156,6 +158,16 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
+            // btnExchange
+            // 
+            this.btnExchange.Location = new System.Drawing.Point(709, 16);
+            this.btnExchange.Name = "btnExchange";
+            this.btnExchange.Size = new System.Drawing.Size(81, 47);
+            this.btnExchange.TabIndex = 12;
+            this.btnExchange.Text = "Quản Lý Giá Trị Quy Đổi";
+            this.btnExchange.UseVisualStyleBackColor = true;
+            this.btnExchange.Click += new System.EventHandler(this.BtnExchange_Click);
+            // 
             // UserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -192,5 +204,6 @@
         private System.Windows.Forms.Button btnCreateNewUser;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnOrder;
+        private System.Windows.Forms.Button btnExchange;
     }
 }

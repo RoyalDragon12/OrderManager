@@ -1,4 +1,5 @@
-﻿using OrderManager.Forms.UserForm;
+﻿using OrderManager.Forms.ExchangeForm;
+using OrderManager.Forms.UserForm;
 using OrderManager.Functions;
 using OrderManager.Models;
 using System;
@@ -356,5 +357,12 @@ namespace OrderManager
             DataSource(sort, dataState);
         }
         #endregion
+
+        private void BtnExchange_Click(object sender, EventArgs e)
+        {
+            ExchangeForm form = new ExchangeForm();
+            form.Show();
+            Close();
+        }
     }
 }

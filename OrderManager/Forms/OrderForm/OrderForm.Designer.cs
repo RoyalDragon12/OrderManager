@@ -56,6 +56,7 @@ namespace OrderManager
             this.lblAllTotalCost = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnDataState = new System.Windows.Forms.Button();
+            this.btnExchange = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -63,6 +64,7 @@ namespace OrderManager
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnExchange);
             this.groupBox2.Controls.Add(this.btnUser);
             this.groupBox2.Controls.Add(this.btnDeleteOrder);
             this.groupBox2.Controls.Add(this.btnEditOrder);
@@ -76,7 +78,7 @@ namespace OrderManager
             // 
             // btnUser
             // 
-            this.btnUser.Location = new System.Drawing.Point(998, 16);
+            this.btnUser.Location = new System.Drawing.Point(911, 16);
             this.btnUser.Name = "btnUser";
             this.btnUser.Size = new System.Drawing.Size(81, 47);
             this.btnUser.TabIndex = 4;
@@ -287,6 +289,16 @@ namespace OrderManager
             this.btnDataState.UseVisualStyleBackColor = true;
             this.btnDataState.Click += new System.EventHandler(this.BtnDataState_Click);
             // 
+            // btnExchange
+            // 
+            this.btnExchange.Location = new System.Drawing.Point(998, 16);
+            this.btnExchange.Name = "btnExchange";
+            this.btnExchange.Size = new System.Drawing.Size(81, 47);
+            this.btnExchange.TabIndex = 5;
+            this.btnExchange.Text = "Quản Lý Giá Trị Quy Đổi";
+            this.btnExchange.UseVisualStyleBackColor = true;
+            this.btnExchange.Click += new System.EventHandler(this.BtnExchange_Click);
+            // 
             // OrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -352,5 +364,6 @@ namespace OrderManager
         private Label label4;
         private Button btnUser;
         private Button btnDataState;
+        private Button btnExchange;
     }
 }

@@ -121,5 +121,12 @@ namespace OrderManager.Forms.UserForm
                 MessageBox.Show("Đã Xảy Ra Lỗi: " + ex.ToString());
             }
         }
+
+        private void BtnExchange_Click(object sender, EventArgs e)
+        {
+            var form = new ExchangeForm.ExchangeForm(); //?
+            form.Show();
+            Close();
+        }
     }
 }
