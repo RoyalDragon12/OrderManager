@@ -34,10 +34,10 @@ namespace OrderManager.Forms.ExchangeForm
 
             numUpDownCNY.Value = (decimal)exchangeCNY.ExchangeNum;
             numericUpDownWeightCost.Value = (decimal)exchangeWeightCost.ExchangeNum;
-            numericUpDownRetailRate.Value = (decimal) exchangeRetailRate.ExchangeNum;
-            numericUpDownTradeRate.Value = (decimal)exchangeTradeRate.ExchangeNum;
+            numericUpDownRetailRate.Value = (decimal) exchangeRetailRate.ExchangeNum * 100;
+            numericUpDownTradeRate.Value = (decimal)exchangeTradeRate.ExchangeNum * 100;
             numericUpDownTradeMin.Value = (decimal)exchangeTradeMin.ExchangeNum;
-            numericUpDownServiceFee.Value = (decimal)exchangeServiceFee.ExchangeNum;
+            numericUpDownServiceFee.Value = (decimal)exchangeServiceFee.ExchangeNum * 100;
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
@@ -74,14 +74,14 @@ namespace OrderManager.Forms.ExchangeForm
                     exchangeWeightCost.ExchangeNum = (double)numericUpDownWeightCost.Value;
                     exchangeWeightCost.ExchangeDate = DateTime.Today;
                 }
-                if (exchangeRetailRate.ExchangeNum != (double)numericUpDownRetailRate.Value)
+                if (exchangeRetailRate.ExchangeNum != (double)numericUpDownRetailRate.Value / 100)
                 {
-                    exchangeRetailRate.ExchangeNum = (double)numericUpDownRetailRate.Value;
+                    exchangeRetailRate.ExchangeNum = (double)numericUpDownRetailRate.Value / 100;
                     exchangeRetailRate.ExchangeDate = DateTime.Today;
                 }
-                if (exchangeTradeRate.ExchangeNum != (double)numericUpDownTradeRate.Value)
+                if (exchangeTradeRate.ExchangeNum != (double)numericUpDownTradeRate.Value / 100)
                 {
-                    exchangeTradeRate.ExchangeNum = (double)numericUpDownTradeRate.Value;
+                    exchangeTradeRate.ExchangeNum = (double)numericUpDownTradeRate.Value / 100;
                     exchangeTradeRate.ExchangeDate = DateTime.Today;
                 }
                 if (exchangeTradeMin.ExchangeNum != (double)numericUpDownTradeMin.Value)
@@ -89,9 +89,9 @@ namespace OrderManager.Forms.ExchangeForm
                     exchangeTradeMin.ExchangeNum = (double)numericUpDownTradeMin.Value;
                     exchangeTradeMin.ExchangeDate = DateTime.Today;
                 }
-                if (exchangeServiceFee.ExchangeNum != (double)numericUpDownServiceFee.Value)
+                if (exchangeServiceFee.ExchangeNum != (double)numericUpDownServiceFee.Value / 100)
                 {
-                    exchangeServiceFee.ExchangeNum = (double)numericUpDownServiceFee.Value;
+                    exchangeServiceFee.ExchangeNum = (double)numericUpDownServiceFee.Value / 100;
                     exchangeServiceFee.ExchangeDate = DateTime.Today;
                 }
                 db.SaveChanges();

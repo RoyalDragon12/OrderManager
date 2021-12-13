@@ -30,6 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExchangeForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.numericUpDownServiceFee = new System.Windows.Forms.NumericUpDown();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.numericUpDownTradeMin = new System.Windows.Forms.NumericUpDown();
+            this.label11 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.numericUpDownRetailRate = new System.Windows.Forms.NumericUpDown();
             this.label9 = new System.Windows.Forms.Label();
@@ -43,22 +49,16 @@
             this.numUpDownCNY = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.numericUpDownTradeMin = new System.Windows.Forms.NumericUpDown();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.numericUpDownServiceFee = new System.Windows.Forms.NumericUpDown();
-            this.label13 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnUpdate = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownServiceFee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTradeMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRetailRate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTradeRate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownWeightCost)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDownCNY)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTradeMin)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownServiceFee)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,6 +87,79 @@
             this.groupBox1.Size = new System.Drawing.Size(776, 288);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(742, 192);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(28, 22);
+            this.label12.TabIndex = 29;
+            this.label12.Text = "%";
+            // 
+            // numericUpDownServiceFee
+            // 
+            this.numericUpDownServiceFee.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownServiceFee.Location = new System.Drawing.Point(639, 188);
+            this.numericUpDownServiceFee.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDownServiceFee.Name = "numericUpDownServiceFee";
+            this.numericUpDownServiceFee.Size = new System.Drawing.Size(97, 29);
+            this.numericUpDownServiceFee.TabIndex = 28;
+            this.numericUpDownServiceFee.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(515, 192);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(118, 22);
+            this.label13.TabIndex = 27;
+            this.label13.Text = "Phí Dịch Vụ :";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(276, 192);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(32, 22);
+            this.label10.TabIndex = 26;
+            this.label10.Text = "Tệ";
+            // 
+            // numericUpDownTradeMin
+            // 
+            this.numericUpDownTradeMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownTradeMin.Increment = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+            this.numericUpDownTradeMin.Location = new System.Drawing.Point(173, 188);
+            this.numericUpDownTradeMin.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.numericUpDownTradeMin.Name = "numericUpDownTradeMin";
+            this.numericUpDownTradeMin.Size = new System.Drawing.Size(97, 29);
+            this.numericUpDownTradeMin.TabIndex = 25;
+            this.numericUpDownTradeMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(11, 192);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(156, 22);
+            this.label11.TabIndex = 24;
+            this.label11.Text = "Giá Sỉ Tối Thiểu :";
             // 
             // label8
             // 
@@ -241,79 +314,6 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Bảng Quy Đổi Giá Trị";
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(276, 192);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(51, 22);
-            this.label10.TabIndex = 26;
-            this.label10.Text = "VND";
-            // 
-            // numericUpDownTradeMin
-            // 
-            this.numericUpDownTradeMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDownTradeMin.Increment = new decimal(new int[] {
-            500,
-            0,
-            0,
-            0});
-            this.numericUpDownTradeMin.Location = new System.Drawing.Point(173, 188);
-            this.numericUpDownTradeMin.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.numericUpDownTradeMin.Name = "numericUpDownTradeMin";
-            this.numericUpDownTradeMin.Size = new System.Drawing.Size(97, 29);
-            this.numericUpDownTradeMin.TabIndex = 25;
-            this.numericUpDownTradeMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(11, 192);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(156, 22);
-            this.label11.TabIndex = 24;
-            this.label11.Text = "Giá Sỉ Tối Thiểu :";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(742, 192);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(28, 22);
-            this.label12.TabIndex = 29;
-            this.label12.Text = "%";
-            // 
-            // numericUpDownServiceFee
-            // 
-            this.numericUpDownServiceFee.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDownServiceFee.Location = new System.Drawing.Point(639, 188);
-            this.numericUpDownServiceFee.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.numericUpDownServiceFee.Name = "numericUpDownServiceFee";
-            this.numericUpDownServiceFee.Size = new System.Drawing.Size(97, 29);
-            this.numericUpDownServiceFee.TabIndex = 28;
-            this.numericUpDownServiceFee.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(515, 192);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(118, 22);
-            this.label13.TabIndex = 27;
-            this.label13.Text = "Phí Dịch Vụ :";
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btnCancel);
@@ -324,16 +324,6 @@
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Location = new System.Drawing.Point(6, 12);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(321, 49);
-            this.btnUpdate.TabIndex = 0;
-            this.btnUpdate.Text = "Cập Nhật";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
-            // 
             // btnCancel
             // 
             this.btnCancel.Location = new System.Drawing.Point(449, 12);
@@ -343,6 +333,16 @@
             this.btnCancel.Text = "Hủy Bỏ";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(6, 12);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(321, 49);
+            this.btnUpdate.TabIndex = 0;
+            this.btnUpdate.Text = "Cập Nhật";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
             // 
             // ExchangeForm
             // 
@@ -360,12 +360,12 @@
             this.Text = "Bảng Chuyển Đổi";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownServiceFee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTradeMin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRetailRate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTradeRate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownWeightCost)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDownCNY)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTradeMin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownServiceFee)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

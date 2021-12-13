@@ -1,4 +1,6 @@
-﻿using OrderManager.Forms.ExchangeForm;
+﻿using OrderManager.Forms.CreateNewOrderForm;
+using OrderManager.Forms.ExchangeForm;
+using OrderManager.Forms.OrderForm;
 using OrderManager.Forms.UserForm;
 using OrderManager.Functions;
 using OrderManager.Models;
@@ -145,6 +147,7 @@ namespace OrderManager
                     db.SaveChanges();
                     MessageBox.Show("Cập Nhật Thành Công");
                 }
+                DataSource(sort, dataState);
             }
             else
             {
@@ -270,14 +273,14 @@ namespace OrderManager
             Close();
         }
 
-        private void BtnCreateNewOrder_Click(object sender, EventArgs e)
+        private void BtnCreateNewOrderDetail_Click(object sender, EventArgs e)
         {
             Close();
-            CreateNewOrderForm form = new CreateNewOrderForm();
+            CreateNewOrderDetailForm form = new CreateNewOrderDetailForm();
             form.Show();
         }
 
-        private void BtnEditOrder_Click(object sender, EventArgs e)
+        private void BtnEditOrderDetail_Click(object sender, EventArgs e)
         {
             try
             {
@@ -287,7 +290,7 @@ namespace OrderManager
                 var model = (OrderAndDetailModel)dataGridView.Rows[index].DataBoundItem;
                 var orderDetailId = model.OrderDetailId;
                 Close();
-                EditOrderForm form = new EditOrderForm(orderDetailId);
+                EditOrderDetailForm form = new EditOrderDetailForm(orderDetailId);
                 form.Show();
             }
             catch(Exception ex)
@@ -296,7 +299,7 @@ namespace OrderManager
             }
         }
 
-        private void BtnDeleteOrder_Click(object sender, EventArgs e)
+        private void BtnDeleteOrderDetail_Click(object sender, EventArgs e)
         {
             try
             {
@@ -363,6 +366,34 @@ namespace OrderManager
             ExchangeForm form = new ExchangeForm();
             form.Show();
             Close();
+        }
+
+        private void BtnCreateNewOrder_Click(object sender, EventArgs e)
+        {
+            var form = new CreateNewOrderForm();
+            form.Show();
+            Close();
+        }
+
+        private void BtnEditOrder_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var cell = dataGridView.SelectedCells[0];
+                //int index = dataGridView.SelectedRows[0].Index;
+                var index = cell.RowIndex;
+                var model = (OrderAndDetailModel)dataGridView.Rows[index].DataBoundItem;
+                var orderDetailId = model.OrderDetailId;
+                var orderId = db.OrderDetails.Where(x => x.OrderDetailId == orderDetailId).FirstOrDefault().OrderId;
+                var form = new EditOrderForm(orderId);
+                form.Show();
+                Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Đã Xảy Ra Lỗi: " + ex.ToString());
+            }
+            
         }
     }
 }

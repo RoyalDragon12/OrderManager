@@ -65,17 +65,29 @@
     <Compile Include="Forms\ExchangeForm\ExchangeForm.Designer.cs">
       <DependentUpon>ExchangeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\OrderForm\EditOrderForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\OrderForm\EditOrderForm.Designer.cs">
-      <DependentUpon>EditOrderForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\OrderForm\CreateNewOrderForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\OrderForm\CreateNewOrderForm.Designer.cs">
       <DependentUpon>CreateNewOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OrderForm\EditOrderDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OrderForm\EditOrderDetailForm.Designer.cs">
+      <DependentUpon>EditOrderDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OrderForm\CreateNewOrderDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OrderForm\CreateNewOrderDetailForm.Designer.cs">
+      <DependentUpon>CreateNewOrderDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OrderForm\EditOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OrderForm\EditOrderForm.Designer.cs">
+      <DependentUpon>EditOrderForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\UserForm\CreateNewUserForm.cs">
       <SubType>Form</SubType>
@@ -134,14 +146,20 @@
     <EmbeddedResource Include="Forms\ExchangeForm\ExchangeForm.resx">
       <DependentUpon>ExchangeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\OrderForm\EditOrderForm.resx">
-      <DependentUpon>EditOrderForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\OrderForm\CreateNewOrderForm.resx">
       <DependentUpon>CreateNewOrderForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OrderForm\EditOrderDetailForm.resx">
+      <DependentUpon>EditOrderDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OrderForm\CreateNewOrderDetailForm.resx">
+      <DependentUpon>CreateNewOrderDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OrderForm\EditOrderForm.resx">
+      <DependentUpon>EditOrderForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\OrderForm\OrderForm.resx">
       <DependentUpon>OrderForm.cs</DependentUpon>

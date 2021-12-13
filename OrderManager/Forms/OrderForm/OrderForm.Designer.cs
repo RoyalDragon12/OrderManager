@@ -37,10 +37,12 @@ namespace OrderManager
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderForm));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnUser = new System.Windows.Forms.Button();
-            this.btnDeleteOrder = new System.Windows.Forms.Button();
-            this.btnEditOrder = new System.Windows.Forms.Button();
             this.btnCreateNewOrder = new System.Windows.Forms.Button();
+            this.btnExchange = new System.Windows.Forms.Button();
+            this.btnUser = new System.Windows.Forms.Button();
+            this.btnDeleteOrderDetail = new System.Windows.Forms.Button();
+            this.btnEditOrderDetail = new System.Windows.Forms.Button();
+            this.btnCreateNewOrderDetail = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.txtBoxSearch = new System.Windows.Forms.TextBox();
@@ -56,7 +58,7 @@ namespace OrderManager
             this.lblAllTotalCost = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnDataState = new System.Windows.Forms.Button();
-            this.btnExchange = new System.Windows.Forms.Button();
+            this.btnEditOrder = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -64,17 +66,39 @@ namespace OrderManager
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btnExchange);
-            this.groupBox2.Controls.Add(this.btnUser);
-            this.groupBox2.Controls.Add(this.btnDeleteOrder);
             this.groupBox2.Controls.Add(this.btnEditOrder);
             this.groupBox2.Controls.Add(this.btnCreateNewOrder);
+            this.groupBox2.Controls.Add(this.btnExchange);
+            this.groupBox2.Controls.Add(this.btnUser);
+            this.groupBox2.Controls.Add(this.btnDeleteOrderDetail);
+            this.groupBox2.Controls.Add(this.btnEditOrderDetail);
+            this.groupBox2.Controls.Add(this.btnCreateNewOrderDetail);
             this.groupBox2.Controls.Add(this.btnExit);
             this.groupBox2.Location = new System.Drawing.Point(12, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(1172, 74);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
+            // 
+            // btnCreateNewOrder
+            // 
+            this.btnCreateNewOrder.Location = new System.Drawing.Point(11, 16);
+            this.btnCreateNewOrder.Name = "btnCreateNewOrder";
+            this.btnCreateNewOrder.Size = new System.Drawing.Size(81, 47);
+            this.btnCreateNewOrder.TabIndex = 6;
+            this.btnCreateNewOrder.Text = "Tạo Mã Vận Đơn Mới";
+            this.btnCreateNewOrder.UseVisualStyleBackColor = true;
+            this.btnCreateNewOrder.Click += new System.EventHandler(this.BtnCreateNewOrder_Click);
+            // 
+            // btnExchange
+            // 
+            this.btnExchange.Location = new System.Drawing.Point(998, 16);
+            this.btnExchange.Name = "btnExchange";
+            this.btnExchange.Size = new System.Drawing.Size(81, 47);
+            this.btnExchange.TabIndex = 5;
+            this.btnExchange.Text = "Quản Lý Giá Trị Quy Đổi";
+            this.btnExchange.UseVisualStyleBackColor = true;
+            this.btnExchange.Click += new System.EventHandler(this.BtnExchange_Click);
             // 
             // btnUser
             // 
@@ -86,35 +110,35 @@ namespace OrderManager
             this.btnUser.UseVisualStyleBackColor = true;
             this.btnUser.Click += new System.EventHandler(this.BtnUser_Click);
             // 
-            // btnDeleteOrder
+            // btnDeleteOrderDetail
             // 
-            this.btnDeleteOrder.Location = new System.Drawing.Point(180, 16);
-            this.btnDeleteOrder.Name = "btnDeleteOrder";
-            this.btnDeleteOrder.Size = new System.Drawing.Size(81, 47);
-            this.btnDeleteOrder.TabIndex = 3;
-            this.btnDeleteOrder.Text = "Xóa Đơn Hàng";
-            this.btnDeleteOrder.UseVisualStyleBackColor = true;
-            this.btnDeleteOrder.Click += new System.EventHandler(this.BtnDeleteOrder_Click);
+            this.btnDeleteOrderDetail.Location = new System.Drawing.Point(359, 16);
+            this.btnDeleteOrderDetail.Name = "btnDeleteOrderDetail";
+            this.btnDeleteOrderDetail.Size = new System.Drawing.Size(81, 47);
+            this.btnDeleteOrderDetail.TabIndex = 3;
+            this.btnDeleteOrderDetail.Text = "Xóa Đơn Hàng";
+            this.btnDeleteOrderDetail.UseVisualStyleBackColor = true;
+            this.btnDeleteOrderDetail.Click += new System.EventHandler(this.BtnDeleteOrderDetail_Click);
             // 
-            // btnEditOrder
+            // btnEditOrderDetail
             // 
-            this.btnEditOrder.Location = new System.Drawing.Point(93, 16);
-            this.btnEditOrder.Name = "btnEditOrder";
-            this.btnEditOrder.Size = new System.Drawing.Size(81, 47);
-            this.btnEditOrder.TabIndex = 2;
-            this.btnEditOrder.Text = "Sửa Đơn Hàng";
-            this.btnEditOrder.UseVisualStyleBackColor = true;
-            this.btnEditOrder.Click += new System.EventHandler(this.BtnEditOrder_Click);
+            this.btnEditOrderDetail.Location = new System.Drawing.Point(272, 16);
+            this.btnEditOrderDetail.Name = "btnEditOrderDetail";
+            this.btnEditOrderDetail.Size = new System.Drawing.Size(81, 47);
+            this.btnEditOrderDetail.TabIndex = 2;
+            this.btnEditOrderDetail.Text = "Sửa Đơn Hàng";
+            this.btnEditOrderDetail.UseVisualStyleBackColor = true;
+            this.btnEditOrderDetail.Click += new System.EventHandler(this.BtnEditOrderDetail_Click);
             // 
-            // btnCreateNewOrder
+            // btnCreateNewOrderDetail
             // 
-            this.btnCreateNewOrder.Location = new System.Drawing.Point(6, 16);
-            this.btnCreateNewOrder.Name = "btnCreateNewOrder";
-            this.btnCreateNewOrder.Size = new System.Drawing.Size(81, 47);
-            this.btnCreateNewOrder.TabIndex = 1;
-            this.btnCreateNewOrder.Text = "Tạo Đơn Hàng Mới";
-            this.btnCreateNewOrder.UseVisualStyleBackColor = true;
-            this.btnCreateNewOrder.Click += new System.EventHandler(this.BtnCreateNewOrder_Click);
+            this.btnCreateNewOrderDetail.Location = new System.Drawing.Point(185, 16);
+            this.btnCreateNewOrderDetail.Name = "btnCreateNewOrderDetail";
+            this.btnCreateNewOrderDetail.Size = new System.Drawing.Size(81, 47);
+            this.btnCreateNewOrderDetail.TabIndex = 1;
+            this.btnCreateNewOrderDetail.Text = "Tạo Đơn Hàng Mới";
+            this.btnCreateNewOrderDetail.UseVisualStyleBackColor = true;
+            this.btnCreateNewOrderDetail.Click += new System.EventHandler(this.BtnCreateNewOrderDetail_Click);
             // 
             // btnExit
             // 
@@ -289,15 +313,15 @@ namespace OrderManager
             this.btnDataState.UseVisualStyleBackColor = true;
             this.btnDataState.Click += new System.EventHandler(this.BtnDataState_Click);
             // 
-            // btnExchange
+            // btnEditOrder
             // 
-            this.btnExchange.Location = new System.Drawing.Point(998, 16);
-            this.btnExchange.Name = "btnExchange";
-            this.btnExchange.Size = new System.Drawing.Size(81, 47);
-            this.btnExchange.TabIndex = 5;
-            this.btnExchange.Text = "Quản Lý Giá Trị Quy Đổi";
-            this.btnExchange.UseVisualStyleBackColor = true;
-            this.btnExchange.Click += new System.EventHandler(this.BtnExchange_Click);
+            this.btnEditOrder.Location = new System.Drawing.Point(98, 16);
+            this.btnEditOrder.Name = "btnEditOrder";
+            this.btnEditOrder.Size = new System.Drawing.Size(81, 47);
+            this.btnEditOrder.TabIndex = 7;
+            this.btnEditOrder.Text = "Sửa Mã Vận Đơn";
+            this.btnEditOrder.UseVisualStyleBackColor = true;
+            this.btnEditOrder.Click += new System.EventHandler(this.BtnEditOrder_Click);
             // 
             // OrderForm
             // 
@@ -349,9 +373,9 @@ namespace OrderManager
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.TextBox txtBoxSearch;
         private System.Windows.Forms.ListBox listBoxSearch;
-        private System.Windows.Forms.Button btnCreateNewOrder;
-        private System.Windows.Forms.Button btnDeleteOrder;
-        private System.Windows.Forms.Button btnEditOrder;
+        private System.Windows.Forms.Button btnCreateNewOrderDetail;
+        private System.Windows.Forms.Button btnDeleteOrderDetail;
+        private System.Windows.Forms.Button btnEditOrderDetail;
         private System.Windows.Forms.Button btnTempSort;
         private GroupBox groupBox1;
         private Label lblAllTotalCost;
@@ -365,5 +389,7 @@ namespace OrderManager
         private Button btnUser;
         private Button btnDataState;
         private Button btnExchange;
+        private Button btnCreateNewOrder;
+        private Button btnEditOrder;
     }
 }

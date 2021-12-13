@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using OrderManager;
 
 namespace OrderManager.Forms.UserForm
 {
@@ -68,7 +69,7 @@ namespace OrderManager.Forms.UserForm
 
         private void BtnOrder_Click(object sender, EventArgs e)
         {
-            OrderForm form = new OrderForm();
+            var form = new OrderManager.OrderForm();
             form.Show();
             Close();
         }
